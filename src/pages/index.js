@@ -44,6 +44,13 @@ const useStyles = makeStyles({
     "&:after": { 
       right: '60%'
     }
+  },
+  boxContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    maxWidth: 1450,
+    margin: 'auto'
   }
 })
 
@@ -52,17 +59,12 @@ const Home = () => {
   return (
     <Layout>
       <CardMedia className="backgroundImg" image={BgImage} />
-        <Box 
-          display="flex" 
-          maxWidth={1450} 
-          width="100%" 
-          flexDirection= "column"
+        <Box  
           position="absolute" 
           left="50%" 
           top="10%" 
           left= {0}
-          right = {0}
-          margin ="auto" >
+          right = {0} >
         <Typography  > 
           <Box
             component="p"
@@ -80,10 +82,7 @@ const Home = () => {
               fontSize={18} 
               fontWeight={300} >Iniciemos esta aventura juntos</Box>
         </Typography>
-        <Box 
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center" >
+        <Box className={classes.boxContainer} >
           <Button variant="text"  ><Link to="casting" className={` ${classes.button} ${classes.leftbutton}`} >SOY MÚSICO</Link></Button>
           <CardMedia className={ classes.image }  image={BgMusic} />
           <Button variant="text" ><Link to="tipo-cuenta" className={` ${classes.button} ${classes.rightbutton} `}>BUSCO MÚSICO</Link></Button>
