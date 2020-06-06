@@ -1,28 +1,30 @@
 import React from "react"
-import IdentityModal, { useIdentityContext } from "react-netlify-identity-widget"
-import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
+import Header from './header'
+import 'antd/dist/antd.css'; 
+import { ThemeProvider } from '@material-ui/styles';
+import theme from "../theme/muiTheme"
+import Footer from '../components/footer'
+import { makeStyles } from "@material-ui/core/styles"
+import './layout.css'
+const useStyles = makeStyles({
+  main: {
+    minHeight:  'calc( 100vh - 120px )'
+  }
+})
 
 const Layout = ({ children }) => {
-  const identity = useIdentityContext() // see https://github.com/sw-yx/react-netlify-identity for api of this identity object
-  const [dialog, setDialog] = React.useState(false)
-  const name =
-    (identity && identity.user && identity.user.user_metadata && identity.user.user_metadata.name) || "NoName"
-
-  console.log(JSON.stringify(identity))
-  const isLoggedIn = identity && identity.isLoggedIn
+  const classes = useStyles()
   return (
-    <>
-      <nav style={{ background: "green" }}>
-        {" "}
-        Login Status:
-        <button className="btn" onClick={() => setDialog(true)}>
-          {isLoggedIn ? `Hello ${name}, Log out here!` : "LOG IN"}
-        </button>
-      </nav>
-      <main>{children}</main>
-      <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
-    </>
+      <>
+        <ThemeProvider theme={theme}>
+          <Header />
+          <main className={classes.main} >{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </>
+
   )
 }
+  
 
 export default Layout

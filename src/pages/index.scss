@@ -1,0 +1,20 @@
+.gcontainer {
+    &_center-absolute {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        &w350 {
+            width: 350px;
+        }
+    }
+    label {
+        color: #fff;
+    }
+}
+
+.backgroundImg {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}

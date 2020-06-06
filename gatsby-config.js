@@ -7,12 +7,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-netlify-identity`,
-      options: {
-        url: 'https://musiclinkdemo.netlify.app/.netlify/identity'
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -21,6 +15,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
