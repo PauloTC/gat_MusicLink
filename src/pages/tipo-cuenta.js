@@ -5,18 +5,10 @@ import {
   Container,
   Box,
   CardMedia,
-  FormControl,
-  InputLabel,
-  Input,
   Button,
-  InputAdornment,
-  FormControlLabel,
-  Checkbox,
   Typography
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Link } from "gatsby"
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
@@ -57,12 +49,9 @@ const useStyles = makeStyles({
 })
 
 const AccountType = () => {
-  const [state, setState] = React.useState({
+  React.useState({
     checkedA: true
   });
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
   const classes = useStyles()
   return (
     <Layout>

@@ -65,7 +65,7 @@ const Home = () => {
           top="10%" 
           left= {0}
           right = {0} >
-        <Typography  > 
+        <Typography> 
           <Box
             component="p"
             fontSize={42}

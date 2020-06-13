@@ -1,16 +1,10 @@
 import React from 'react';
-import {Dialog, Button , Slide, TextField, Container, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@material-ui/core"
+import {Dialog, Button , Slide, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@material-ui/core"
 export default function AlertDialog({ isOpen, onClose }) {
 
   const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />
   })
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    onClose()
-    // setValidated(true);
-  };
 
   return (
       <Dialog

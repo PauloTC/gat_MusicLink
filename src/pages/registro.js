@@ -4,7 +4,6 @@ import BgImage from "../images/fondo_1.png"
 import {
   Container,
   Box,
-  TextField,
   CardMedia,
   FormControl,
   InputLabel,
@@ -16,7 +15,6 @@ import {
   Typography
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import { Link } from 'gatsby'

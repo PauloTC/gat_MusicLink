@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
         <Grid  height={40} container alignItems="center" justify="space-between" >
           <Grid item md={2} >
               <Link to="/" >
-                <img src={logo}  />
+                <img alt="logo" src={logo}  />
               </Link>
           </Grid>
           <Grid item md={3} >

@@ -2,11 +2,9 @@ import './index.scss'
 import React, { Fragment } from 'react';
 import Container from '@material-ui/core/Container';
 import profileImg from '../images/profile.jpg'
-import Footer from '../components/footer'
-import { Typography, Box, Link, Grid, Divider } from "@material-ui/core"
+import { Typography, Box, Grid, Divider } from "@material-ui/core"
 
 import Rate from '../images/rate_active.png'
-import PhotoCameraOutlinedIcon from '@material-ui/icons/PhotoCameraOutlined';
 import { makeStyles } from "@material-ui/core/styles"
 import Layout from '../components/layout'
 

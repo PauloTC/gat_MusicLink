@@ -4,8 +4,6 @@ import { Typography, Box, Grid, Container, CardMedia, Button } from '@material-u
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import ModalConfirmation from '../components/Modal/modal'
-import  SoundclouddIMG from '../images/soundcloud.png'
-import  SpotifyIMG from '../images/spotify.png'
 import  VimeoIMG from '../images/vimeo.png'
 import  YoutubeIMG from '../images/youtube.png'
 import BgImage from '../images/fondo_1.png'
@@ -22,10 +20,6 @@ const useStyles = makeStyles({
     greenText: {
         color: "#07eb00"
     },
-    container:{
-        textAlign: 'left',
-        position: 'relative'
-    },
     button: {
         width: 350,
         height: 40,
@@ -37,7 +31,9 @@ const useStyles = makeStyles({
     },
     container: {
       position: 'relative',
-      height: '100vh'
+      height: '100vh',
+      textAlign: 'left',
+        position: 'relative'
     },
     greenbtn: {
       width: 160

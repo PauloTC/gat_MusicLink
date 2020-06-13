@@ -68,12 +68,12 @@ const Upload = ()=> {
     const classes = useStyles();
 
     const [isOpen, setIsOpen] = useState(false);
-    const [isOpenDetail, setIsOpenDetail] = useState(false);
-    const [isOpenPhoto, setIsOpenPhoto] = useState(false)
+    const [setIsOpenDetail] = useState(false);
+    const [setIsOpenPhoto] = useState(false)
 
     const [isVideoComplete, setIsVideoComplete] = useState(false)
-    const [isAlbumComplete, setIsAlbumComplete] = useState(false)
-    const [isDescriptionComplete, setIsDescriptionComplete] = useState(false)
+    const [isAlbumComplete ] = useState(false)
+    const [isDescriptionComplete] = useState(false)
 
     const handleOpenModal = () => {
         setIsOpen(true);
@@ -84,19 +84,10 @@ const Upload = ()=> {
     const handleOpenModalPhoto = () => {
         setIsOpenPhoto(true)
     }
-    const handleCloseModalPhoto = () => {
-        setIsOpenPhoto(false)
-        setIsAlbumComplete(true)
-    }
     const handleCloseModal = () => {
         setIsOpen(false);
         setIsVideoComplete(true)
     };
-    const handleCloseModalDetail= () => {
-        setIsOpenDetail(false)
-        setIsDescriptionComplete(true)
-    }
-
 
     return (
         <Layout className={classes.layout}  >
