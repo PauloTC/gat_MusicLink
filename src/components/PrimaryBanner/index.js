@@ -84,8 +84,8 @@ export default function PrimaryBanner()  {
                     <Box p={5}  className={ classes.form }  >
                         <Box mb={3} >
                             <TextField
-                                    label="¿ Qué buscas hoy ?"
-                                    placeholder="Guitarrista , solita , dúo"
+                                    label="Qué evento buscas realizar?"
+                                    placeholder="Boda, cumple, quince"
                                     fullWidth
                                     InputLabelProps={{
                                         shrink: true,
@@ -94,8 +94,8 @@ export default function PrimaryBanner()  {
                         </Box>
                         <Box mb={3} >
                             <TextField
-                                    label="Experiencia Músical"
-                                    placeholder="Boda, cumple, quince"
+                                    label="Qué formato buscas?"
+                                    placeholder="Guitarrista , solita , dúo"
                                     fullWidth
                                     InputLabelProps={{
                                         shrink: true,
