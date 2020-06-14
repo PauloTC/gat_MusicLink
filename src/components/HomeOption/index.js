@@ -46,11 +46,13 @@ const useStyles = makeStyles({
 const HomeOption = () => {
     const classes = useStyles()
     return(
-        <Box className={classes.boxContainer} >
-            <Button variant="text"  ><Link to="casting" className={` ${classes.button} ${classes.leftbutton}`} >SOY MÚSICO</Link></Button>
-            <CardMedia className={ classes.image }  image={BgMusic} />
-            <Button variant="text" ><Link to="tipo-cuenta" className={` ${classes.button} ${classes.rightbutton} `}>BUSCO MÚSICO</Link></Button>
-        </Box>
+        <div>
+            <Box className="boxContainer" >
+                <Button variant="text"  ><Link to="casting" className={` ${classes.button} ${classes.leftbutton}`} >SOY MÚSICO</Link></Button>
+                <CardMedia className={ classes.image }  image={BgMusic} />
+                <Button variant="text" ><Link to="tipo-cuenta" className={` ${classes.button} ${classes.rightbutton} `}>BUSCO MÚSICO</Link></Button>
+            </Box>
+        </div>
     )
 
 }
