@@ -18,3 +18,11 @@
     height: 100vh;
     width: 100%;
 }
+
+.boxContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1450px;
+    margin: auto;
+}
