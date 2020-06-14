@@ -1,10 +1,9 @@
 import React ,{ Fragment } from 'react';
-// import { Input, Checkbox, Button } from 'element-react';
 import Solista from '../../images/Solista.png'
 import Duo from '../../images/Duo.png'
 import Trio from '../../images/Trio.png'
 import Grupo from '../../images/Grupo.png'
-import { Typography, Grid , Box, TextareaAutosize, Button, TextField } from '@material-ui/core';
+import { Typography, Grid , Box, TextareaAutosize, Button } from '@material-ui/core';
 import {
     makeStyles
   } from '@material-ui/core/styles';

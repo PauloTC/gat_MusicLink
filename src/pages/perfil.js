@@ -71,7 +71,7 @@ const Profile = () => {
                     {
                       variables.map((item)=> {
                         return (
-                          <Box display="flex" py={3} my={2}  borderBottom="1px solid #b0c0ca"  justifyContent="space-between"  >
+                          <Box key={item.label}  display="flex" py={3} my={2}  borderBottom="1px solid #b0c0ca"  justifyContent="space-between"  >
                             <Typography variant="subtitle1" >
                                 <Box component="span" fontWeight="bold" >{ item.label }</Box>
                             </Typography>

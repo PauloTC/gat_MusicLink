@@ -12,6 +12,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import {Link} from 'gatsby'
 import SEO from "../components/seo"
 
+
 const useStyles = makeStyles({
   title: {
     color: "#fff",  
@@ -46,6 +47,13 @@ const useStyles = makeStyles({
       right: '60%'
     }
   },
+  boxContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    maxWidth: 1450,
+    margin: 'auto'
+  }
 })
 
 const Home = () => {
@@ -77,7 +85,7 @@ const Home = () => {
               fontSize={18} 
               fontWeight={300} >Iniciemos esta aventura juntos</Box>
         </Typography>
-        <Box className="boxContainer">
+        <Box className={classes.boxContainer} >
           <Button variant="text"  ><Link to="casting" className={` ${classes.button} ${classes.leftbutton}`} >SOY MÚSICO</Link></Button>
           <CardMedia className={ classes.image }  image={BgMusic} />
           <Button variant="text" ><Link to="tipo-cuenta" className={` ${classes.button} ${classes.rightbutton} `}>BUSCO MÚSICO</Link></Button>

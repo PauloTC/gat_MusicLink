@@ -33,7 +33,6 @@ const useStyles = makeStyles({
       position: 'relative',
       height: '100vh',
       textAlign: 'left',
-        position: 'relative'
     },
     greenbtn: {
       width: 160
