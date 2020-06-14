@@ -122,7 +122,7 @@ const Casting = () => {
                                 <Box mb={1} >
                                   <FormControlLabel
                                       control={<GreenCheckbox checked={state.checkedG} onChange={handleChange} name="checkedG" />}
-                                      label="Acepto los términos y condiciones de Musiclink."
+                                      label="Acepto las Politicas de Privacidad."
                                   />
                                 </Box>
                                 <FormControlLabel

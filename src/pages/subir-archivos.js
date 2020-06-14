@@ -106,14 +106,14 @@ const Upload = ()=> {
                         {isVideoComplete ? CompleteBox : null}
                         {isVideoComplete ?  <img  width={180} alt="video" src={videoIconActive} /> : <img  width={180} alt="video" src={videoIcon} />}
                         <Typography  variant="h6" >
-                            <Box fontSize={18} fontWeight={500} >Agregar video cover</Box>
+                            <Box fontSize={18} fontWeight={500} >Agregar video de portada</Box>
                         </Typography>
                     </Box>
                     <Box position="relative" padding={4} onClick={handleOpenModalPhoto} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
                         {isAlbumComplete ? CompleteBox : null}
                         {isAlbumComplete ? <img  width={180} alt="album" src={albumIconActive} /> : <img  width={180} alt="album" src={albumIcon} />}
                         <Typography>
-                            <Box fontSize={18} fontWeight={500} >Agregar foto de albúm</Box>
+                            <Box fontSize={18} fontWeight={500} >Agregar foto de perfil</Box>
                         </Typography>
                     </Box>
                     <Box  position="relative" padding={4} onClick={handleOpenModalDescription} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
@@ -126,7 +126,7 @@ const Upload = ()=> {
                 </Box>
                 <Box width={350} textAlign="center" mt={12}  >
                     <Button fullWidth variant="contained" color="primary"  >
-                      <Link to="perfil" >Listo</Link>
+                      <Link to="tipo-musica" >Listo</Link>
                     </Button>
                 </Box>
                 {isVideoComplete && isAlbumComplete && isDescriptionComplete ? <Button className="upload_btn "  variant="primary" >Listo</Button> : null }       
