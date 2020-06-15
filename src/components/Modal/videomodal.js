@@ -48,10 +48,10 @@ export default function VideoModal() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
-            Cancel
+            Cancelar
           </Button>
           <Button onClick={handleClose} color="primary">
-            Subscribe
+            Confirmar
           </Button>
         </DialogActions>
       </Dialog>
