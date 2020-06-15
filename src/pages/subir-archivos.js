@@ -11,7 +11,7 @@ import {
   } from '@material-ui/core/styles';
 
 import Container from '@material-ui/core/Container';
-import videoIcon from '../images/add_video.png'
+
 import videoIconActive from '../images/add_video_active.png'
 import albumIcon from '../images/add_album.png'
 import albumIconActive from '../images/add_album_active.png'
@@ -23,6 +23,10 @@ import AlertDialog from '../components/Modal/videomodal'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import BgImage from '../images/fondo_1.png'
 import { Link} from 'gatsby'
+import VideoModal from '../components/Modal/VideoModal'
+import UploadPhotoDialog from '../components/Modal/DropzoneModal'
+import DescriptionModal from '../components/Modal/DescriptionModal'
+
 
 
 const useStyles = makeStyles({
@@ -101,28 +105,29 @@ const Upload = ()=> {
                   </Typography>
                 </Box>
                 <Box maxWidth={1200} width="100%" display="flex" mt={12} mx="auto" justifyContent="space-between" >
-                    <Box position="relative" padding={4} onClick={handleOpenModal} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
+                    <VideoModal />
+                    <UploadPhotoDialog />
+                    <DescriptionModal />
+                    {/* <Box  >
                        
                         {isVideoComplete ? CompleteBox : null}
                         {isVideoComplete ?  <img  width={180} alt="video" src={videoIconActive} /> : <img  width={180} alt="video" src={videoIcon} />}
-                        <Typography  variant="h6" >
-                            <Box fontSize={18} fontWeight={500} >Agregar video de portada</Box>
-                        </Typography>
-                    </Box>
-                    <Box position="relative" padding={4} onClick={handleOpenModalPhoto} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
+                        
+                    </Box> */}
+                    {/* <Box position="relative" padding={4} onClick={handleOpenModalPhoto} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
                         {isAlbumComplete ? CompleteBox : null}
                         {isAlbumComplete ? <img  width={180} alt="album" src={albumIconActive} /> : <img  width={180} alt="album" src={albumIcon} />}
                         <Typography>
                             <Box fontSize={18} fontWeight={500} >Agregar foto de perfil</Box>
                         </Typography>
-                    </Box>
-                    <Box  position="relative" padding={4} onClick={handleOpenModalDescription} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
+                    </Box> */}
+                    {/* <Box  position="relative" padding={4} onClick={handleOpenModalDescription} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
                         {isDescriptionComplete ? CompleteBox: null}
                         {isDescriptionComplete ? <img  width={180} alt="description" src={descIconActive} /> : <img  width={180} alt="description" src={descIcon} />}
                         <Typography >
                             <Box fontSize={18} fontWeight={500} >Agregar descripción</Box>
                         </Typography>
-                    </Box>
+                    </Box> */}
                 </Box>
                 <Box width={350} textAlign="center" mt={12}  >
                     <Button fullWidth variant="contained" color="primary"  >

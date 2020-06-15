@@ -8,10 +8,9 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import descIcon from '../../images/add_desc.png'
 
-import videoIcon from '../../images/add_video.png'
-
-export default function VideoModal() {
+export default function DescriptionModal() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -25,13 +24,13 @@ export default function VideoModal() {
   return (
     <div>
       <Box position="relative" padding={4}flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} onClick={handleClickOpen}>
-        <img width={180} src={videoIcon} />
+        <img width={180} src={descIcon} />
         <Typography  variant="h6" >
-            <Box fontSize={18} fontWeight={600} >Agregar video de portada</Box>
+            <Box fontSize={18} fontWeight={600} >Agregar descripción</Box>
         </Typography>
       </Box>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Ruta de tu video</DialogTitle>
+        <DialogTitle id="form-dialog-title">Describe tu formato</DialogTitle>
         <DialogContent>
           <DialogContentText>
             To subscribe to this website, please enter your email address here. We will send updates
@@ -40,10 +39,11 @@ export default function VideoModal() {
           <TextField
             autoFocus
             margin="dense"
-            id="name"
+            id="description"
             label="Ingresa un cover de tu perfil  "
-            type="email"
+            rows={6}
             fullWidth
+            multiline
           />
         </DialogContent>
         <DialogActions>
