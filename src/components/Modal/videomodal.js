@@ -40,7 +40,7 @@ export default function VideoModal() {
           <TextField
             autoFocus
             margin="dense"
-            id="name"
+            id="email"
             label="Ingresa un cover de tu perfil  "
             type="email"
             fullWidth

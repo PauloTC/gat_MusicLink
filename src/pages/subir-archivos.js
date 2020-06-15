@@ -11,19 +11,10 @@ import {
   } from '@material-ui/core/styles';
 
 import Container from '@material-ui/core/Container';
-
-import videoIconActive from '../images/add_video_active.png'
-import albumIcon from '../images/add_album.png'
-import albumIconActive from '../images/add_album_active.png'
-import descIcon from '../images/add_desc.png'
-import descIconActive from '../images/add_desc_active.png'
 import AlertDialog from '../components/Modal/videomodal'
-// import DialogDescription from '../components/Modal/descriptionModal'
-// import DialogPhoto from '../components/Modal/uploadPhotoModal'
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import BgImage from '../images/fondo_1.png'
 import { Link} from 'gatsby'
-import VideoModal from '../components/Modal/VideoModal'
+import VideoModal from '../components/Modal/videomodal'
 import UploadPhotoDialog from '../components/Modal/DropzoneModal'
 import DescriptionModal from '../components/Modal/DescriptionModal'
 
@@ -66,28 +57,12 @@ const useStyles = makeStyles({
 });
 
 const Upload = ()=> {
-
-    const CompleteBox =  <Box className="upload_checkcircle" width="100%" display="flex" justifyContent="flex-end" ><CheckCircleIcon /></Box>
-
     const classes = useStyles();
-
     const [isOpen, setIsOpen] = useState(false);
-    const [setIsOpenDetail] = useState(false);
-    const [setIsOpenPhoto] = useState(false)
-
     const [isVideoComplete, setIsVideoComplete] = useState(false)
     const [isAlbumComplete ] = useState(false)
     const [isDescriptionComplete] = useState(false)
 
-    const handleOpenModal = () => {
-        setIsOpen(true);
-      };
-    const handleOpenModalDescription = () => {
-        setIsOpenDetail(true)
-    };
-    const handleOpenModalPhoto = () => {
-        setIsOpenPhoto(true)
-    }
     const handleCloseModal = () => {
         setIsOpen(false);
         setIsVideoComplete(true)
@@ -108,26 +83,6 @@ const Upload = ()=> {
                     <VideoModal />
                     <UploadPhotoDialog />
                     <DescriptionModal />
-                    {/* <Box  >
-                       
-                        {isVideoComplete ? CompleteBox : null}
-                        {isVideoComplete ?  <img  width={180} alt="video" src={videoIconActive} /> : <img  width={180} alt="video" src={videoIcon} />}
-                        
-                    </Box> */}
-                    {/* <Box position="relative" padding={4} onClick={handleOpenModalPhoto} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
-                        {isAlbumComplete ? CompleteBox : null}
-                        {isAlbumComplete ? <img  width={180} alt="album" src={albumIconActive} /> : <img  width={180} alt="album" src={albumIcon} />}
-                        <Typography>
-                            <Box fontSize={18} fontWeight={500} >Agregar foto de perfil</Box>
-                        </Typography>
-                    </Box> */}
-                    {/* <Box  position="relative" padding={4} onClick={handleOpenModalDescription} flexDirection="column"  borderRadius={16} bgcolor="#fff" width={320}  display="flex" alignItems="center" justifyContent="center" height={320} >
-                        {isDescriptionComplete ? CompleteBox: null}
-                        {isDescriptionComplete ? <img  width={180} alt="description" src={descIconActive} /> : <img  width={180} alt="description" src={descIcon} />}
-                        <Typography >
-                            <Box fontSize={18} fontWeight={500} >Agregar descripción</Box>
-                        </Typography>
-                    </Box> */}
                 </Box>
                 <Box width={350} textAlign="center" mt={12}  >
                     <Button fullWidth variant="contained" color="primary"  >
