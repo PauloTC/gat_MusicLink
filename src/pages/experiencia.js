@@ -39,7 +39,7 @@ const ExperiencePage = () => {
                 </FormControl>
               </Box>
               <Button variant="outlined" color="primary">
-                Subir video
+                <Link to="subir-archivos">Subir info</Link>
               </Button>
             </Box>
             <Box mb={6} borderRadius={8} display="flex" alignItems="flex-end" p={3}  >
@@ -56,11 +56,11 @@ const ExperiencePage = () => {
                 </FormControl>
               </Box>
               <Button variant="outlined" color="primary">
-                  Subir video
+                <Link to="subir-archivos">Subir info</Link>
               </Button>
             </Box>
             <Button color="primary" variant="contained" className={classes.button} >
-              <Link to="subir-archivos">Siguiente</Link> </Button>
+              <Link to="perfil-artista">Siguiente</Link> </Button>
           </Box>
         </form>
       </div>

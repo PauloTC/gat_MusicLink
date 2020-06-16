@@ -91,7 +91,6 @@ const Upload = ()=> {
                 </Box>
                 {isVideoComplete && isAlbumComplete && isDescriptionComplete ? <Button className="upload_btn "  variant="primary" >Listo</Button> : null }       
             </Container>
-            <AlertDialog  isOpen={isOpen} onClose={handleCloseModal} />
             {/* <DialogDescription isOpen={isOpenDetail} onClose={handleCloseModalDetail}  />
             <DialogPhoto isOpen={isOpenPhoto} onClose={ handleCloseModalPhoto } /> */}
         </Layout>

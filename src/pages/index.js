@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import BgImage from "../images/fondo_3.png"
-
+import {graphql} from "gatsby"
 import {
   Box,
   CardMedia,
@@ -13,16 +13,17 @@ import { makeStyles } from "@material-ui/core/styles"
 import SEO from "../components/seo"
 import HomeOption from '../components/HomeOption'
 
-const useStyles = makeStyles({
-  title: {
-    color: "#fff",  
-    fontWeight: "bold",
-  },
-
-})
-
+export const query = graphql`
+  query MyQuery {
+    hasura {
+      profile {
+        name
+        id
+      }
+    }
+  }
+`
 const Home = () => {
-  const classes = useStyles()
   return (
     <Layout>
       <SEO title="Home" />
@@ -41,7 +42,8 @@ const Home = () => {
             color="#fff" 
             position="relative" 
             mb={0}
-            fontWeight={500}>¿ QUÉ BUSCAS HOY ?</Box>
+            fontWeight={500}>¿ QUÉ BUSCAS HOY ?
+            </Box>
             <Box 
               pb={12} 
               position="relative" 
