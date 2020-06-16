@@ -5,20 +5,20 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-graphql', 
-      options: {
-        typeName: 'HASURA',
-        fieldName: 'hasura', // <- fieldName under which schema will be stitched
-        createLink: () =>
-          createHttpLink({
-            uri: `https://musiclink-db.herokuapp.com/v1/graphql`, // <- Configure connection GraphQL url
-            headers: {},
-            fetch,
-          }),
-        refetchInterval: 10, // Refresh every 10 seconds for new data
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-graphql', 
+    //   options: {
+    //     typeName: 'HASURA',
+    //     fieldName: 'hasura', // <- fieldName under which schema will be stitched
+    //     createLink: () =>
+    //       createHttpLink({
+    //         uri: `https://musiclink-db.herokuapp.com/v1/graphql`, // <- Configure connection GraphQL url
+    //         headers: {},
+    //         fetch,
+    //       }),
+    //     refetchInterval: 10, // Refresh every 10 seconds for new data
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
