@@ -73,7 +73,7 @@ const Register = () => {
           <form className={classes.form}  >
             <Typography >
               <Box  component="p" fontWeight="bold" fontSize={24} >Registrarse</Box>
-              <Box mb={4} component="p"  fontSize={14} color="#5f5f5f" >Revise y proporcione la información requerida para  terminar de registrarse y ser parte de la familia Music link.</Box>
+              <Box mb={4} component="p"  fontSize={14} color="#5f5f5f" >Revise y proporcione la información requerida para  terminar de registrarse y ser parte de la familia Musiclink.</Box>
             </Typography>
             <FormControl className={classes.margin}>
               <InputLabel htmlFor="input-with-icon-adornment">
@@ -122,7 +122,7 @@ const Register = () => {
               <Box  component="p" color="#5f5f5f" mt={3} fontSize={14} >Te enviaremos promociones comerciales, ofertas especiales, inspiración y las actualizaciones de nuestras políticas a través del correo electrónico.</Box>
             </Typography>
             <FormControlLabel control={<Checkbox color="primary" className={classes.checkbox} checked={state.checkedA} onChange={handleChange} name="checkedA" />} label="No quiero recibir mensajes de promociones de 
-Music Link. También puedo optar por desactivarlos en la configuración de mi cuenta o a través del enlace del mensaje." />
+MusicLink. También puedo optar por desactivarlos en la configuración de mi cuenta o a través del enlace del mensaje." />
             <Box width="100%" mt={4}  >
               <Button fullWidth className={classes.button}  variant="contained" color="primary">
                 <Link to="login" >Terminar registro</Link>

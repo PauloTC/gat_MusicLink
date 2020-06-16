@@ -44,7 +44,7 @@ function Footer(){
                         < FacebookIcon  className={ classes.icon } />
                         < InstagramIcon  className={ classes.icon } />
                         < TwitterIcon  className={ classes.icon } />
-                        <Typography  variant="subtitle2" className={ classes.icon } >© 2020 Music Link</Typography>
+                        <Typography  variant="subtitle2" className={ classes.icon } >© 2020 MusicLink</Typography>
                     </Box>
                 </Box>
             </Container>

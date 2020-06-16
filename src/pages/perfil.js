@@ -87,8 +87,8 @@ const Profile = () => {
                 </Grid>
                 <Grid item container alignItems="center" md={6}>
                   <Box ml={15} mt={8} width={500}  p={4} boxShadow="0 46px 113px -11px rgba(60, 89, 89, 0.22)"  >
-                    <h3>¿Te gusta Music Link</h3>
-                    <p>Tu opinión es importante para que Music Link siga</p>
+                    <h3>¿Te gusta MusicLink</h3>
+                    <p>Tu opinión es importante para que MusicLink siga</p>
                     <p> brindandote un mejor experiencia musical. </p>
                     <div className="profile_rate--box" >
                       <img height="60" width="60" src={Rate} alt="rate" />

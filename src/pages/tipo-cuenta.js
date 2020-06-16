@@ -72,13 +72,13 @@ const AccountType = () => {
         >
           <form className={classes.form}  >
               <Box py={1} >
-                <Button fullWidth variant="outlined" color="primary"> <Link to="login" >Tengo una cuenta Music Link</Link>  </Button>
+                <Button fullWidth variant="outlined" color="primary"> <Link to="login" >Tengo una cuenta MusicLink</Link>  </Button>
               </Box>
               <Box py={1} >
-                <Button fullWidth variant="outlined" color="primary"> Tengo una cuenta Music Link </Button>
+                <Button fullWidth variant="outlined" color="primary"> Cuenta de Facebook</Button>
               </Box>
               <Box py={1} >
-                <Button fullWidth variant="outlined" color="primary"> Tengo una cuenta Music Link </Button>
+                <Button fullWidth variant="outlined" color="primary"> Cuenta de Google </Button>
               </Box>
               <Box py={3} >
                 <Typography variant="subtitle1" >
