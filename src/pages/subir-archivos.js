@@ -86,7 +86,7 @@ const Upload = ()=> {
                 </Box>
                 <Box width={350} textAlign="center" mt={12}  >
                     <Button fullWidth variant="contained" color="primary"  >
-                      <Link to="tipo-musica" >Listo</Link>
+                      <Link to="perfil" >Listo</Link>
                     </Button>
                 </Box>
                 {isVideoComplete && isAlbumComplete && isDescriptionComplete ? <Button className="upload_btn "  variant="primary" >Listo</Button> : null }       

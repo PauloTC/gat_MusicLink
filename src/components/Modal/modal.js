@@ -94,7 +94,7 @@ export default function AlertDialogSlide(props) {
               variant="contained"
               color="primary"
             >
-              <Link className={classes.to} to="subir-archivos">
+              <Link className={classes.to} to="tipo-musica">
                 De acuerdo
               </Link>
             </Button>

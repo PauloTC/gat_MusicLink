@@ -42,7 +42,7 @@ const useStyles = makeStyles({
         width: '100%'
     },
     boxWhite: {
-        transform: "translate(-50%, -45%)"
+        transform: "translate(-50%, -57%)"
     }
 });
 
@@ -58,6 +58,12 @@ const generos = [
     'Baladas',
     'Pop',
     'Instrumental'
+  ];
+const formatos = [
+    'Cumpleaños',
+    'Concierto',
+    'Boda',
+    'Matrimonio',
   ];
 
 const ITEM_HEIGHT = 48;
@@ -76,6 +82,7 @@ const MusicType = ()=> {
     const classes = useStyles();
     const [personName, setPersonName] = React.useState([]);
     const [format, setFormat] = React.useState([]);
+    const [gender, setGender] = React.useState([]);
 
     const handleChange = (event) => {
         setPersonName(event.target.value);
@@ -83,6 +90,10 @@ const MusicType = ()=> {
 
     const handleFormat = (event) => {
         setFormat(event.target.value);
+    };
+
+    const handleGender = (event) => {
+        setGender(event.target.value);
     };
     
     return (
@@ -92,8 +103,10 @@ const MusicType = ()=> {
                <Box  position="absolute" left="50%" top="50%" className={classes.boxWhite} >
                   <Typography  className={ classes.title } variant="h4" >
                       <Box textAlign="center" mb={6} >¿Qué tipo de música tocas?</Box>
+                      <Box fontWeight={300} fontSize={24} textAlign="center" color="#fff">Llena tus géneros, tus formatos </Box>
+                      <Box fontWeight={300} fontSize={24} textAlign="center"color="#fff">y los eventos dónde te gustaría tocar</Box>
                   </Typography> 
-                  <Box borderRadius={7} p={3} bgcolor="#fff" >
+                  <Box mt={5} borderRadius={7} p={3} bgcolor="#fff" >
                     <FormControl className={classes.formControl}>
                         <InputLabel id="demo-mutiple-chip-label">Géneros</InputLabel>
                         <Select
@@ -139,6 +152,33 @@ const MusicType = ()=> {
                             MenuProps={MenuProps}
                             >
                             {names.map((name) => (
+                                <MenuItem key={name} value={name}>
+                                {name}
+                                </MenuItem>
+                            ))}
+                            </Select>
+                        </FormControl>
+                    </Box>
+                    <Box mt={3} >
+                        <FormControl className={classes.formControl}>
+                            <InputLabel id="demo-mutiple-chip-label">Eventos</InputLabel>
+                            <Select
+                            labelId="demo-mutiple-chip-label"
+                            id="demo-mutiple-chip"
+                            multiple
+                            value={gender}
+                            onChange={handleGender}
+                            input={<Input id="select-multiple-chip" />}
+                            renderValue={(selected) => (
+                                <div className={classes.chips}>
+                                {selected.map((value) => (
+                                    <Chip key={value} label={value} className={classes.chip} />
+                                ))}
+                                </div>
+                            )}
+                            MenuProps={MenuProps}
+                            >
+                            {formatos.map((name) => (
                                 <MenuItem key={name} value={name}>
                                 {name}
                                 </MenuItem>

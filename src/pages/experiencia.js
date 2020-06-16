@@ -60,7 +60,7 @@ const ExperiencePage = () => {
               </Button>
             </Box>
             <Button color="primary" variant="contained" className={classes.button} >
-              <Link to="perfil">Siguiente</Link> </Button>
+              <Link to="subir-archivos">Siguiente</Link> </Button>
           </Box>
         </form>
       </div>

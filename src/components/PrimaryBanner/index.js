@@ -113,19 +113,6 @@ export default function PrimaryBanner()  {
                             />
                         </Box>
                         <Box mb={3} >
-                            <Typography variant="subtitle2" >Precio</Typography>
-                            <Slider
-                                defaultValue={30}
-                                getAriaValueText={valuetext}
-                                aria-labelledby="discrete-slider"
-                                valueLabelDisplay="auto"
-                                step={10}
-                                marks
-                                min={10}
-                                max={110}
-                            />
-                        </Box>
-                        <Box mb={3} >
                           <FormControl className={classes.formControl}>
                               <InputLabel  id="demo-simple-select-label">Generos</InputLabel>
                               <Select
@@ -150,6 +137,19 @@ export default function PrimaryBanner()  {
                             </Grid>
                           </Grid>
                         </MuiPickersUtilsProvider>
+                        <Box mt={3} >
+                            <Typography variant="subtitle2" >Precio</Typography>
+                            <Slider
+                                defaultValue={30}
+                                getAriaValueText={valuetext}
+                                aria-labelledby="discrete-slider"
+                                valueLabelDisplay="auto"
+                                step={10}
+                                marks
+                                min={10}
+                                max={110}
+                            />
+                        </Box>
                         <Box mt={5} >
                             <Button className={classes.button} variant="contained" color="primary"> Buscar </Button>
                         </Box>
