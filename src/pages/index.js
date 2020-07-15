@@ -13,17 +13,17 @@ import { makeStyles } from "@material-ui/core/styles"
 import SEO from "../components/seo"
 import HomeOption from '../components/HomeOption'
 
-export const query = graphql`
-  query MyQuery {
-    hasura {
-      profile {
-        name
-        id
-      }
-    }
-  }
-`
-const Home = () => {
+// export const query = graphql`
+//   query MyQuery {
+//     hasura {
+//       profile {
+//         name
+//         id
+//       }
+//     }
+//   }
+// `
+const Home = ({data}) => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -36,15 +36,18 @@ const Home = () => {
           right = {0} >
         <Typography> 
           <Box
-            component="p"
+            component="span"
+            display="block"
             fontSize={42}
             textAlign="center" 
             color="#fff" 
             position="relative" 
             mb={0}
-            fontWeight={500}>¿ QUÉ BUSCAS HOY ?
+            fontWeight={500}>¿ QUÉ BUSCAS HOY ? sldkfjasklj
             </Box>
             <Box 
+              component="span"
+              display="block"
               pb={12} 
               position="relative" 
               textAlign="center"

@@ -15,28 +15,6 @@ const theme = createMuiTheme({
     typography: {
         fontFamily: 'Roboto'
     },
-    overrides: {
-        MuiButton : {
-            text: {
-                textTransform: "capitalize"
-            }
-        },
-        MuiCssBaseline: {
-            '@global': {
-                ".MuiButton-containedPrimary": {
-                    color: "#fff !important"
-                },
-                ".to": {
-                    color: "#fff !important",
-                    textTransform: 'capitalize !important'
-                },
-                a: {
-                    color: 'inherit',
-                    textDecoration: 'none'
-                }
-            },
-        },
-    },
     palette: {
         primary: {
             light: '#63ccff',
