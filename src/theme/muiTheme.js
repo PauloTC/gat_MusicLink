@@ -10,7 +10,6 @@ const theme = createMuiTheme({
             md: 768,
             lg: 992,
             xl: 1450
-            
         },
     },
     typography: {
